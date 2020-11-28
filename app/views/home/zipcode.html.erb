@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-body">
+    <form>
+  		<div class="form-group">
+	  		<%= form_tag zipcode_path, :method => 'POST' do %>
+	    	<div class="form-inline my-2 my-lg-0">
+	      	<%= number_field_tag 'zipcode', nil, placeholder: "Search Zipcode", class: "form-control mr-sm-2" %>
+	      	<%= submit_tag 'Submit', class: 'btn btn-outline-secondary my-2 my-sm-0' %>
+      		</div>
+    	<% end %>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+
+
+<div class="jumbotron ">
+  <p class="lead">This is the current temp readout for the <%= @zip_query %> zipcode , <%= @name %></p>
+  <hr class="my-4">
+	<h3>
+	<%= @final_output %>
+ 	</h3>
+ <!--  
+</div>
+<div class="jumbotron ">
+  <h1 class="display-4"><%= @final_output %></h1>
+  <p class="lead">This is the current ozone air quality readout for the <%= @zip_query %> zipcode.</p>
+  <hr class="my-4">
+  	@uri = URI(@url)
+  	@response = Net::HTTP.get(@uri)
+  	@output = JSON.parse(@response)
+  	@out2 = JSON.pretty_generate(@output)
+  	@data = @out2
+  	@result = JSON.parse(@data)
+  <br/>
+  
+  
+</div> -->

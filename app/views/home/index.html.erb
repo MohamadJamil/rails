@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	hello
+	<% if current_user %> 
+	<h1><%= current_user.email %></h1>
+	<% end %>
+</body>
+</html>
