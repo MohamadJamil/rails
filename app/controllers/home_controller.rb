@@ -21,7 +21,9 @@ class HomeController < ApplicationController
       @response = Net::HTTP.get(@uri)
       @output = JSON.parse(@response)
       @name = @output['name']
-    
+      @currWeather = @output['weather']
+      @current = @currWeather[0]['main']
+      @desc = @currWeather[0]['description']		
     # Check for empty return result   
       if @output.empty?
         @final_output = "Error"
